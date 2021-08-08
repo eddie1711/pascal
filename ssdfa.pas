@@ -2148,7 +2148,23 @@ begin
         readln
 end.}
 
-
+program B3;
+uses crt;
+var x,dem,l,k:integer;
+begin
+        clrscr;
+        write('nhap x'); readln(x);
+                l:=x;
+        while l<>0 do
+        begin
+                L:=l mod 10;
+                k:=l;
+                dem:=k;
+                l:=l div 10;
+        end;
+        write(L);
+        readln
+end.
 
 //2019-2020
 {program B1;
@@ -2205,7 +2221,7 @@ begin
         for j:=i+1 to t do
         if s[i]=s[j] then
         begin
-                        r:=r+1
+                r:=r+1
         end
         else 
                 s[i]:=s[i+1];
