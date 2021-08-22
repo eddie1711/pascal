@@ -1549,10 +1549,10 @@ begin
         if (c mod 4=0) or (c mod 400=0) then write(29)
         else write(28);
         stt := 0;
-    For i := 1  to b do           
+    For i := 1  to b do
             case b of
-                  1,3,5,7,8,10,12 : stt := stt + 31;                   
-                  4,6,9,11: stt := stt + 30;       
+                  1,3,5,7,8,10,12 : stt := stt + 31;
+                  4,6,9,11: stt := stt + 30;
                   2  : stt := stt + 28;
             Else
     stt := stt + a;
@@ -1572,11 +1572,11 @@ begin
         for i:=1 to n do
                 read(M[i]);
                 write('nhap k'); readln(k);
-        if M[k]<=2 then 
+        if M[k]<=2 then
                 write('yes')
         else write('no');
         for i:=1 to n do
-        if M[i]<=2 then 
+        if M[i]<=2 then
                 dem:=dem+1;
         writeln;
                 write(dem);
@@ -1644,7 +1644,7 @@ begin
         write('nhap n'); readln(n);
         for i:=1 to n do
         begin
-                write('M[',i,']='); read(M[i]); 
+                write('M[',i,']='); read(M[i]);
         end;
         for i:=1 to n do
         begin
@@ -1669,7 +1669,7 @@ begin
         writeln;
         for i:=1 to n do
         for j:=M[i] to A[i] do
-        begin 
+        begin
                 t:=t+1;
                 s[t]:=j;
         end;
@@ -1680,10 +1680,10 @@ begin
         writeln;
         for i:=1 to t-1 do
         for j:=i+1 to t do
-       if S[i]=S[j] then 
+       if S[i]=S[j] then
         begin
                 dem:=dem+1;
-                if dem>max then 
+                if dem>max then
                         max:=dem;
                 write(s[i],' ');
                 g:=g+1;
@@ -1697,7 +1697,7 @@ begin
                 write(B[i]);
                 while B[i]=B[i+1] do
                         begin
-                                dem:=dem+1; 
+                                dem:=dem+1;
                                 i:=i+1;
                         end;
         end;
@@ -1706,10 +1706,10 @@ begin
         for i:=1 to g do
                 write(B[i], ' ');
         writeln;
-        for i:=2 to g do 
-        if B[i]< min then 
+        for i:=2 to g do
+        if B[i]< min then
                 min:=B[i];
-        write(Min);   
+        write(Min);
         readln
 end.}
 
@@ -1751,7 +1751,7 @@ begin
         clrscr;
         write('nhap a,b'); readln(a,b);
         for i:=1 to a do
-        if (i mod 2=0) and (a mod i=0) and (b mod i=0) then 
+        if (i mod 2=0) and (a mod i=0) and (b mod i=0) then
         begin
                 write(i, ';');
                 dem:=dem+1;
@@ -1764,7 +1764,7 @@ begin
                 if a mod i=0 then
                 begin
                         d1:=d1+1;
-                        if d1>max then 
+                        if d1>max then
                                 max:=d1;
                         a:=a div i;
                 end
@@ -1780,7 +1780,7 @@ begin
                 if b mod j=0 then
                 begin
                         d2:=d2+1;
-                        if d2>max2 then 
+                        if d2>max2 then
                                 max2:=d2;
                         b:=b div j;
                 end
@@ -1823,7 +1823,7 @@ begin
         if (A[i]<0) and (A[i]>max) then
                 max:=A[i];
         for i:=1 to n do
-        if A[i]<0 then 
+        if A[i]<0 then
                 dem:=dem+1;
         writeln;
         write(max, ' ',A[dem+1]);
@@ -1848,7 +1848,10 @@ uses crt;
 var k:integer;
 begin
         clrscr;
-        write('nhap k'); readln(k);}
+        repeat
+        write('nhap k'); readln(k);
+        until k<9}
+
 
 //2014-2015
 {Program B1;
@@ -1880,10 +1883,10 @@ begin
         clrscr;
         write('nhap m,n'); readln(m,n);
         write('nhap k'); readln(k);
-        a:=m;
-        b:=n;
-        c:=m;
-        d:=n;
+                a:=m;
+                b:=n;
+                c:=m;
+                d:=n;
         for i:=1 to m do
         if (m mod i =0) and (n mod i =0) then
         write(i, ' ');
@@ -1984,14 +1987,9 @@ begin
         write('m='); readln(m);
         write('quyen sach co so dong la' ,n*k);
         writeln;
-        if m mod k=0 then 
+        if m mod k=0 then
                 write(m div k, ' ' ,k)
         else
-        begin
-                t:=m div k;
-                g:=m mod k;
-                write(t+1, ' ' ,g);
-        end;
         writeln;
         s:= #32;
         for i:=n downto 1 do
@@ -2013,7 +2011,7 @@ A:array[1..100] of longint;
 begin
         clrscr;
         repeat
-                write('nhap n'); readln(n);
+        write('nhap n'); readln(n);
         until n<30;
         write('nhap s'); readln(s);
         for i:=1 to n do
@@ -2029,7 +2027,7 @@ begin
         end;
         for i:=1 to n-1 do
         for j:=i+1 to n do
-        if M[i]<M[j] then 
+        if M[i]<M[j] then
         begin
                 r:=M[i];
                 M[i]:=M[j];
@@ -2041,19 +2039,19 @@ begin
         writeln;
         max:=M[1];
         for j:=1 to n do
-                if max=A[j] then 
+                if max=A[j] then
                         write(j, ' ');
         writeln;
         max:=0;
         for i:=1 to n do
         for j:=n downto 1 do
         if M[i]=M[j] then
-        begin 
+        begin
                 dem:=dem+1;
-                if dem>max then 
+                if dem>max then
                         max:=dem;
         end
-        else 
+        else
         dem:=0;
         write(max);
         readln
@@ -2100,16 +2098,47 @@ end.}
 //2018-2019
 {program B1;
 uses crt;
-var p,q,i,j,x,y:real;
+var p,q,i,j,THUONG,du,thuong1,du1:integer;
+t,m,x,y,f,z,UCLN:real;
 begin
         clrscr;
         write('nhap p'); readln(p);
         write('nhap q'); readln(q);
-        for i:= to 100000000000000000000000000000000000000 do
-        for j:=100000000000000000000000000000000000000 to 1e(-38) do
-                if (i+j=p) and (i-j=q) then
-                        write(i, ' ' ,j); 
-
+        x:=(p+q)/2;
+        y:=(p-q)/2;
+               if ((p+q) mod 2= 0) and ((p-q) mod 2=0) then
+                        write(x:0:0, ' ' ,y:0:0);
+                if (p+q) mod 2<>0 then
+                begin
+                        thuong:=(p+q) div 2;
+                        du:= (p+q) mod 2;
+                        write((thuong*2 +du), '/' ,'2', ' ');
+                end;
+         if (p-q) mod 2<>0 then
+                begin
+                        thuong1:=(p-q) div 2;
+                        du1:= (p-q) mod 2;
+                        write((thuong1*2+du1), '/' ,'2');
+                end;
+        writeln;
+        t:=y-x;
+        m:=x*y;
+        if m<0 then
+        begin
+                t:=t*(-1);
+                m:=m*(-1);
+        end;
+        f:=t;
+        z:=m;
+        while t<>m do
+        begin
+                if t>m then
+                        t:=t-m
+                else m:=m-t;
+        end;
+        UCLN:= t;
+        writeln;
+        write(f/t:0:0, '/' ,z/UCLN:0:0);
         readln
 end.}
 
@@ -2137,7 +2166,7 @@ begin
         writeln;
         repeat
                 M[i]:=M[i-1];
-                if M[i] mod 2=0 then 
+                if M[i] mod 2=0 then
                         write(M[i]);
         until M[i] mod 2 =0;
         writeln;
@@ -2148,9 +2177,9 @@ begin
         readln
 end.}
 
-program B3;
+{program B3;
 uses crt;
-var x,dem,l,k:integer;
+var x,dem,l:integer;
 begin
         clrscr;
         write('nhap x'); readln(x);
@@ -2158,13 +2187,11 @@ begin
         while l<>0 do
         begin
                 L:=l mod 10;
-                k:=l;
-                dem:=k;
                 l:=l div 10;
         end;
         write(L);
         readln
-end.
+end.}
 
 //2019-2020
 {program B1;
@@ -2204,16 +2231,16 @@ end.}
 uses crt;
 var i,dem,dem1,dem2,r,t,j:integer;
 s:string;
-begin   
+begin
         clrscr;
         write('nhap xau s'); readln(s);
         for i:=1 to length(s) do
-                if s[i] in ['R'] then 
+                if s[i] in ['R'] then
                         dem:=dem+1;
         for i:=1 to length(s) do
-                if S[i] in ['G'] then   
+                if S[i] in ['G'] then
                         dem1:=dem1+1;
-        for i:=1 to length(s) do 
+        for i:=1 to length(s) do
                 if S[i] in ['Y'] then
                         dem2:=dem2+1;
         t:=length(s);
@@ -2223,7 +2250,7 @@ begin
         begin
                 r:=r+1
         end
-        else 
+        else
                 s[i]:=s[i+1];
                 s[j]:=s[j+1];
         if (dem>0) and (dem1>0) and(dem2>0) and (r=0) then
@@ -2254,6 +2281,1389 @@ begin
         readln
 end.}
 
+//Bai Tap Tong Hop
+//CHUYEN DE 1
+{program B1_1;
+uses crt;
+var n,i,dem,j:integer;
+M:array[1..100] of integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        i:=2;
+        j:=0;
+        repeat
+        begin
+                if n mod i=0 then
+                        begin
+                                dem:=dem+1;
+                                n:=n div i;
+                        end;
+                if n mod i<>0 then
+                begin
+                        write(i, ' ');
+                        i:=i+1;
+                        j:=j+1;
+                        M[j]:=dem;
+                        dem:=0;
+                end;
+        end;
+        until n=1;
+                writeln();
+        for I:=1 to j do
+        write(M[i], ' ');
+        readln
+end.}
+
+{program B1_2;
+uses crt;
+var n,i,dem:integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                if n mod i=0 then
+                        dem:=dem+1;
+        end;
+        write(dem);
+        readln
+end.}
+
+{rogram B1_3;
+uses crt;
+var n,i,t:integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        if n mod i =0 then
+        t:=t+i;
+        write(t);
+        readln
+end.}
+
+{program B1_4;
+uses crt;
+var a,b,c,d,max,i,BCNN: integer;
+begin
+        clrscr;
+        write('nhap a,b,c,d'); readln(a,b,c,d);
+        Max := a;
+        if b > Max then Max := b;
+        if c > Max then Max := c;
+        if d > Max then Max := d;
+        BCNN:=0;
+        i:=max;
+        while BCNN=0 do
+        begin
+                if (i mod a=0) and (i mod b=0) and (i mod c=0) and (i mod d=0) then
+                        BCNN:=i
+                else i:=i+1;
+        end;
+        write(BCNN);
+        readln
+end.}
+
+//CHUA LAM DC
+{program B1_5;
+uses crt;
+var i,n,max,j:integer;
+M:array[1..100] of integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        for i:=1 to n-1 do
+        for j:=i+1 to n do
+        if M[i]>M[j] then
+        begin
+                max:=M[i];
+                M[i]:=M[j];
+                M[j]:=max;
+        end;
+        for i:=1 to n do
+        write(M[i], ' ');
+        readln;
+end.}
+
+{program B1_6;
+uses crt;
+var t,n,i,dem,j,r:integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        t:=1;
+        i:=1;
+        repeat
+        T:=t*i;
+        i:=i+1;
+        until i=n+1;
+        for j:=1 to t do
+               if t mod j=0 then
+                        dem:=dem+1;
+        for j:=1 to t do
+                if t mod j=0 then
+                        r:=r+j;
+        write(dem, ' ',r);
+        readln
+end.}
+
+{program B1_7;
+uses crt;
+var UCLN,a,b,c,d,e,max,i: integer;
+begin
+        clrscr;
+        write('nhap a,b,c,d,e'); readln(a,b,c,d,e);
+        Max := a;
+        if b > Max then Max := b;
+        if c > Max then Max := c;
+        if d > Max then Max := d;
+        if e > Max then Max := e;
+        UCLN:=0;
+        i:=max;
+        while UCLN=0 do
+        begin
+                if (a mod i=0) and (b mod i=0) and (c mod i=0) and (d mod i=0) and (e mod i=0) then
+                        UCLN:=i
+                else i:=i-1;
+        end;
+        write(UCLN);
+        readln;
+end.}
+
+{program B1_8;
+uses crt;
+var i,n,dem: integer;
+begin
+        cLrSCr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        if n mod i=0 then dem:=dem+1;
+        write(dem);
+        readln
+end.}
+
+{program B1_9;
+uses crt;
+var BCNN,a,b,i,max:integer;
+begin
+        clrscr;
+        write('nhap a,b'); readln(a,b);
+        max:=a;
+        if max <b then max:=B;
+        i:=max;
+        while BCNN=0 do
+        begin
+                if (i mod a=0) and (i mod b=0) then
+                        BCNN:=i
+                else i:=i+1;
+        end;
+        write(BCNN);
+        readln
+end.}
+
+//CHUA LAM DC
+{program B1_10;
+uses crt;
+var n,i,t,m,dem,d2:integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        write('nhap m'); readln(m);
+        t:=1;
+        i:=1;
+        repeat
+                T:=t*i;
+                i:=i+1;
+        until i=n+1;
+        dem:=1;
+        while d2=0 do
+        begin
+                if t mod m=0 then
+                begin
+                        M:=M*m;
+                        if t mod m =0 then
+                        begin
+                                d2:=d2+1;
+                                dem:=dem+1;
+                        end;
+                end
+                else
+                M:=m*m;
+                dem:=dem+1;
+        end;
+        write(dem);
+        readln
+end.}
+
+//CHUYEN DE 2
+{program B1;
+uses crt;
+var n,i,dem:longint;
+t,r:real;
+M:array[1..1000000] of real;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+        write('M[',i,']='); readln(M[i]);
+        end;
+        for i:=1 to n do
+        t:=t+M[i];
+        r:=t/n;
+        write(r:0:0);
+        for i:=1 to n do
+        begin
+                if M[i]>r then
+                        dem:=dem+1;
+        end;
+        writeln;
+        write(dem);
+        readln
+end.}
+
+{program B2;
+uses crt;
+var n,i:integer;
+max:real;
+M:array [1..100] of real;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        max:=M[1];
+        for i:=1 to n do
+                if max<M[i] then
+                        max:=M[i];
+        write(max:0:0);
+        writeln;
+        for i:=1 to n do
+                if max=M[i] then
+                begin
+                        write(i);
+                        break;
+                end;
+        readln
+end.}
+
+{program B3;
+uses crt;
+var n,i:integer;
+max:real;
+M:array [1..100] of real;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        max:=M[1];
+        for i:=1 to n do
+                if max<M[i] then
+                        max:=M[i];
+        write(max:0:0);
+        writeln;
+        for i:=1 to n do
+                if max=M[i] then
+                begin
+                        write(i, ' ');
+                end;
+        readln
+end.}
+
+{program B4;
+uses crt;
+var n,i:integer;
+min:real;
+M:array [1..100] of real;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        min:=M[1];
+        for i:=1 to n do
+                if min>M[i] then
+                        min:=M[i];
+        write(min:0:0);
+        writeln;
+        for i:=1 to n do
+                if min=M[i] then
+                begin
+                        write(i, ' ');
+                        break;
+                end;
+        readln
+end.}
+
+{program B5;
+uses crt;
+var n,i:integer;
+min:real;
+M:array [1..100] of real;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        min:=M[1];
+        for i:=1 to n do
+                if min>M[i] then
+                        min:=M[i];
+        write(min:0:0);
+        writeln;
+        for i:=1 to n do
+                if min=M[i] then
+                begin
+                        write(i, ' ');
+                end;
+        readln
+end.}
+
+{program B6;
+uses crt;
+var n,i,j,r:integer;
+M:array[1..100] of integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        for i:=1 to n-1 do
+        for j:=i+1 to n do
+        if M[i]>M[j] then
+        begin
+                r:=M[i];
+                M[i]:=M[j];
+                M[j]:=r;
+        end;
+        for i:=1 to n do
+        write(M[i], ' ');
+        readln
+end.}
+
+{program B7;
+uses crt;
+var n,i,j,r:integer;
+M:array[1..100] of integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        for i:=1 to n-1 do
+        for j:=i+1 to n do
+        if M[i]<M[j] then
+        begin
+                r:=M[i];
+                M[i]:=M[j];
+                M[j]:=r;
+        end;
+        for i:=1 to n do
+        write(M[i], ' ');
+        readln
+end.}
+
+{program B8;
+uses crt;
+var k,i,n:integer;
+M:array[1..100] of longint;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        write('nhap k'); readln(k);
+        for i:=1 to n do
+                if k=M[i] then
+                        write(i, ' ');
+        readln
+end.}
+
+{program B9;
+uses crt;
+var x,n,i,dem:integer;
+M:array[1..100] of integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        for i:=1 to n do
+        begin
+                x:=trunc(sqrt(M[i]));
+                if sqr(x)= M[i] then
+                        dem:=dem+1;
+        end;
+        write(dem);
+        readln
+end.}
+
+//CHUA LAM DC
+{program B10;
+uses crt;
+var n,i,dem,j,tong:integer;
+NT:boolean;
+M:array[1..100] of integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        nt:=true;
+        for i:=1 to n do;
+        begin
+                j:=2;
+                While (M[i] mod j <> 0) and (j<Sqrt(M[i])) do j:=j+1;
+                If j>Sqrt(M[i]) then NT:=True
+                        Else Nt:=False;
+                If NT then tong:=tong+M[i];
+        end;
+        write(tong);
+        readln
+end.}
+
+//CHUA LAM DC
+{program B11;
+uses crt;
+var n,i,j,tong,r,g:integer;
+M:array[1..100] of integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        for i:=1 to n do
+        begin
+               for j:=1 to n do
+
+        end
+        write(r);
+        readln
+end.}
+
+{program B12;
+uses crt;
+var j,n,i,r:integer;
+cs:boolean;
+M:array[1..100] of integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        for i:=1 to n do
+                r:=abs(M[2]-M[1]);
+                cs:=true;
+        for i:=2 to n do
+        begin
+                if (abs(M[i]-M[i-1]))<>r then
+                begin
+                        cs:=false;
+                        break;
+                end
+        end;
+        if cs then write('true')
+        else write('false');
+        readln
+end.}
+
+//CHUA LAM DC
+{program B13;}
+
+{program B14;
+uses crt;
+var n,i,j,r:integer;
+M:array[1..100] of integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        for i:=1 to n-1 do
+        for j:=i+1 to n do
+        if M[i]<M[j] then
+        begin
+                r:=M[i];
+                M[i]:=M[j];
+                M[j]:=r;
+        end;
+        write(M[1]);
+        writeln;
+        write(M[2]);
+        readln
+end.}
+
+//CHUA LAM DC
+{program B15;
+uses crt;
+var n,i,dem:integer;
+M:array[1..100] of integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        repeat
+                if M[i+1] mod 2 <>0 then dem:=dem+1
+                else
+                M[i+1]:=M[i+1+2];
+        until M[i]>=M[n];
+        write(dem);
+        readln
+end.}
+
+//CHUA LAM DC
+{program B16;
+uses crt;
+var }
+
+//CHUA LAM DC
+{program B17;
+uses crt;
+var n,i,j,r,g,m,k,z:integer;
+A:array[1..100] of integer;
+B:array[1..100] of integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        write('nhap m'); readln(m);
+        for i:=1 to n do
+        begin
+                write('A[',i,']='); readln(A[i]);
+        end;
+        for j:=1 to m do
+        begin
+                write('B[',j,']='); readln(B[j]);
+        end;
+        for i:=1 to n-1 do
+        for k:=i+1 to n do
+        if A[i]>A[k] then
+        begin
+                r:=A[i];
+                A[i]:=A[k];
+                A[k]:=r;
+        end;
+        for j:=1 to m-1 do
+        for k:=j+1 to m do
+        if B[i]>B[k] then
+        begin
+                g:=B[j];
+                B[j]:=B[k];
+                B[k]:= g;
+        end;
+                readln
+end.}
+
+//CHUA LAM DC
+{program B18;}
+
+{program B19;
+uses crt;
+var n,i:integer;
+M:array[1..100] of integer;
+begin
+        clrscr;
+        write('nhap n'); readln(N);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        for I:=n downto 1 do
+        write(M[i], ' ');
+        readln
+end.}
+
+{program B20;
+uses crt;
+var i,dem,t,n,r,d2:integer;
+M:array[1..100] of integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        for i:=1 to n do
+        begin
+                if (M[i]-M[i-1]<0)then
+                        dem:=dem+1;
+        end;
+        for i:=1 to n do
+        begin
+                if M[i]-M[i+1]>0 then
+                        d2:=d2+1;
+        end;
+        if (dem=0) or (d2=0) then write('True')
+        else write('False');
+        readln
+end.}
+
+//CHUA LAM DC
+{program B21;}
+
+{program B22;
+uses crt;
+var n,i,r,dem,d2:integer;
+begin
+        clrscr;
+        repeat
+                readln(n);
+                if n<>0 then
+                        r:=r+1;
+                if n<>0 then
+                        if n mod 3=0 then
+                               dem:=dem+1;
+                if n<0 then
+                        if n mod 2=0 then
+                                d2:=d2+1;
+        until n=0;
+        write(r);
+                writeln;
+        write(dem);
+                writeln;
+        write(d2);
+        readln
+end.}
+
+{program B23;
+uses crt;
+var d2,k,n,r,dem:integer;
+begin
+        clrscr;
+                readln(k);
+        repeat
+                readln(n);
+                if n<>0 then
+                        r:=r+1;
+                if (n<>0) and(n<k) then
+                        dem:=dem+1;
+                if (N<>0) and(N mod k=0) then
+                        d2:=d2+1;
+        until n=0;
+        write(r);
+                writeln;
+        write(dem);
+                writeln;
+        write(d2);
+        readln
+end.}
+
+//CHUA LAM DC
+{program B24;
+uses crt;
+var }
+
+//CHUA LAM DC
+{program B25;
+uses crt;
+var d,d1,n,t,i:integer;
+M:array[1..100] of integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        for i:=n downto 1 do
+        begin
+                if M[i]=0 then
+                        d:=d+i;
+                        break;
+        end;
+        for i:=1 to n do
+        begin
+                if M[i]=0 then
+                        d1:=d1+i;
+                        break;
+        end;
+        while i<>n do
+        write(t);
+        readln
+end.}
+
+//CHUA LAM DC
+{program B26;}
+
+{program B27;
+uses crt;
+var a,b,n,i,dem: longint;
+begin
+        clrscr;
+        write('nhap a,b,n'); readln(a,b,n);
+        for i:=a to b do
+                if i mod n=0 then
+                        dem:=dem+1;
+        write(dem);
+        readln
+end.}
+
+//CHUA LAM DC
+{program B28;
+uses crt;
+var}
+
+//CHUA LAM DC
+{program B29;}
+
+//CHUA LAM DC
+{program B30;
+uses crt;
+var n,i:integer;}
+
+//CHUA LAM DC
+{program B31;}
+
+//CHUA LAM DC
+{program B32;}
+
+{program B33;
+uses crt;
+var n,m,UCLN,BCNN:integer;
+begin
+        clrscr;
+        write('nhap n,m'); readln(n,m);
+        BCNN:=n*m;
+        while n<>m do
+        begin
+                if n>m then n:=n-1
+                else m:=m-n;
+        end;
+        UCLN:=n;
+        BCNN:=BCNN div UCLN;
+        write(UCLN);
+                writeln;
+        write(BCNN);
+        readln
+end.}
+
+{program B34;
+uses crt;
+var n,s,m:integer;
+CS:boolean;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        n:=m;
+        if n=0 then CS:=false
+        else
+                begin
+                        s:=0;
+                        while n<>0 do
+                        begin
+                                s:=s +(n mod 10)*(n mod 10)*(n mod 10);
+                                n:= n div 10
+                        end;
+                end;
+                        if s=m then CS:=true
+                                else CS:=false;
+        if cs then writeln('TRUE')
+                else write('FALSE');
+        readln
+end.}
+
+//CHUA LAM DC
+{program B35;
+uses crt;}
+
+{program B36;
+uses crt;
+var n,k,i,dem:integer;
+M:array[1..100] of integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        write('nhap k'); readln(k);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        for i:=1 to n do
+        begin
+                if M[i] mod k=0 then
+                        dem:=dem+1;
+        end;
+        write(dem);
+        readln
+end.}
+//CHUA LAM DC
+{program B37;}
+
+//CHUA LAM DC
+{program B38;}
+
+//CHUA LAM DC
+{program B39;}
+
+//CHUA LAM DC
+{program B40}
+
+//CHUYEH DE 3
+{program B41;
+uses crt;
+var i:integer;
+s: string;
+begin
+        clrscr;
+        write('nhap xau s'); readln(s);
+        write(upcase(s));
+        readln
+end.}
+
+{program B42;
+uses crt;
+var i:integer;
+s:string;
+begin
+        clrscr;
+        write('nhap s'); readln(s);
+        for i:=1 to length(s) do
+                if s[i] in ['A' ..'Z'] then
+                        s[i]:=chr(ord(s[i])+32);
+        write(s);
+        readln
+end.}
+
+{program B43;
+uses crt;
+var i,dem:integer;
+s:string;
+begin
+        clrscr;
+        write('nhap s'); readln(s);
+        for i:=1 to length(s) do
+                if s[i] in ['1' .. '9'] then
+                        dem:=dem+1;
+        write(dem);
+        readln
+end.}
+
+{program B44;
+uses crt;
+var i:integer;
+s:string;
+begin
+        clrscr;
+        write('nhap s'); readln(s);
+        While Pos('  ',s)>0 Do
+                Delete(s,pos('  ',s),1);
+        If s[1]=' ' then delete(s,1,1);
+        If s[length(s)]=' ' then delete(s, length(s),1);
+        Write(s);
+        readln
+End.}
+
+{program B45;
+uses crt;
+var i:integer;
+s:string;
+begin
+        clrscr;
+        write('nhap s'); readln(s);
+        for i:=1 to length(s) do
+        begin
+                write(s[i]);
+                writeln;
+        end;
+        readln
+end.}
+
+{program B46;
+uses crt;
+var St:String;
+       dem: Array['A'..'Z'] Of Byte;
+       i:Byte;
+       ch:Char;
+Begin
+        clrscr;
+    Write('Nhap xau St: '); Readln(St);
+    For ch:='A' To 'Z' Do
+        dem[ch]:=0;
+    For i:=1 To Length(St) Do
+        If Upcase(St[i]) IN ['A'..'Z'] Then
+                Inc(dem[Upcase(St[i])]);
+    For ch:='A' To 'Z' Do
+        If dem[ch]>0 Then Writeln(ch,' : ',dem[ch]);
+    Readln;
+End.}
+
+{program B47;
+uses crt;
+var i:integer;
+s:string;
+begin
+        clrscr;
+        write('nhap s'); readln(s);
+        for i:=length(s) downto 1 do
+                if S[i] in ['0'..'9'] then
+                        delete(s,i,1);
+        write(s);
+        readln
+end.}
+
+//CHUA LAM DC
+{program B48;}
+
+{program B49;
+uses crt;
+var i:integer;
+s:string;
+ch:char;
+begin
+        clrscr;
+        write('nhap s'); readln(s);
+        write('nhap ch'); readln(ch);
+        for i:=length(s) downto 1 do
+                if s[i] in [ch] then
+                        delete(s,i,1);
+        write(s);
+        readln
+end.}
+
+//CHUA HIEU CACH LAM
+{program B50;
+uses crt;
+var s:string;
+    x,y,z,t:byte;
+begin
+        clrscr;
+        write('Nhap vao mot xau: '); readln(s);
+        z:=length(s);
+        for y:=length(s) downto 1 do
+        begin
+                if ((s[y]=' ') or (y=1)) then
+                begin
+                        for t:=y to z do
+                                write(s[t]);
+                                z:=y
+                end;
+        end;
+        readln
+end.}
+
+{program B51;
+uses crt;
+var i,d:integer;
+s1,s2:string;
+begin
+        clrscr;
+        write('nhap s1'); readln(s1);
+        write('nhap s2'); readln(s2);
+        d:=0;
+        while pos(s2,s1)<>0 do
+        begin
+                d:=d+1;
+                delete(s1,pos(s2,s1),length(s2));
+        end;
+        write('Xau s2 xuat hien ',d,' lan trong xau s1');
+        readln
+end.}
+
+//CHUA LAM DC
+{program B52;
+uses crt;
+var }
+
+//CHUA LAM DC
+{program B53;
+uses crt;
+var }
+
+//CHUA LAM DC
+{program B54;
+uses crt;
+var i:integer;
+s:string;
+begin
+        clrscr;
+        write('nhap s'); readln(s);
+        for i:=1 to length(s) do
+        begin
+                if S[i] in ['..' .. '.....'] then
+                        delete(s,i,1)}
+
+//CHUA LAM DC
+{program B55;
+uses crt;
+var }
+
+//CHUA LAM DC
+{program B56;
+uses crt;
+var }
+
+//CHUA LAM DC
+{program B57;
+uses crt;
+var }
+
+{program B58;
+uses crt;
+var i:integer;
+s:string;
+begin
+        clrscr;
+        write('nhap s'); readln(s);
+        S[1]:= upcase(s[1]);
+        for i:=length(s) downto 1 do
+                if S[i]=#32 then
+                        S[i+1]:=Upcase(s[i+1]);
+        write(s);
+        readln
+end.}
+
+{program B59;
+uses crt;
+var dem,i,k:integer;
+s:string;
+begin
+        clrscr;
+        write('nhap s'); readln(s);
+        write('nhap k'); readln(k);
+        repeat 
+                if s[i]=S[i+1] then
+                        dem:=dem+1;
+                i:=i+1;
+        until i= length(s);
+        dem:=dem+1;
+        if dem=k then write('co');
+        for i:=1 to length(s) do  
+                if s[i]=s[i+1] then
+                begin
+                        delete(s,i,k);
+                        break;
+                end;
+        writeln;
+        write(s);
+        readln
+end.}
+
+{program B60;
+uses crt;
+var i:integer;
+s:string;
+begin
+        clrscr;
+        write('nhap s'); readln(s);
+        for i:=length(s) downto 1 do
+                if s[i] in ['1'] +['3'] + ['5'] + ['7'] + ['9'] then
+                        delete(s,i,1);
+        for i:=length(s) downto 1 do
+                write(s[i]);
+        readln
+end.}
+
+{program B61;
+uses crt;
+var i:integer;
+s:string;
+begin
+        clrscr;
+        write('nhap s'); readln(s);
+        for i:=length(s) downto 1 do
+                if s[i] in ['0'] +['2'] + ['4'] + ['6'] + ['8'] then
+                        delete(s,i,1);
+        for i:=length(s) downto 1 do
+                write(s[i]);
+        readln
+end.}
+
+//CHUA LAM DC PHAN DEM SO
+{program B62;
+uses crt;
+var St:String;
+       dem: Array['A'..'Z'] Of Byte;
+       i:Byte;
+       ch:Char;
+Begin
+        clrscr;
+    Write('Nhap xau St: '); Readln(St);
+    For ch:='A' To 'Z' Do
+        dem[ch]:=0;
+    For i:=1 To Length(St) Do
+        If Upcase(St[i]) IN ['A'..'Z'] Then
+                Inc(dem[Upcase(St[i])]);
+    For ch:='A' To 'Z' Do
+        If dem[ch]>0 Then Writeln(ch,' : ',dem[ch]);
+    Readln;
+End.}
+
+//CHUA LAM DC
+{program B63;}
+
+//CHUA LAM DC
+{program B64;
+uses crt;
+var }
+
+//CHUA LAM DC
+{program B65;
+uses crt;
+var }
+
+{program B66;
+uses crt;
+var i,d,d1:integer;
+s:string;
+begin
+        clrscr;
+        write('nhap s'); readln(s);
+        for i:=1 to length(s) do
+                if s[i]= '(' then 
+                        d:=d+1;
+        for i:=1 to length(s) do
+                if S[i]= ')' then
+                        d1:=d1+1;
+        if d>=d1 then write('YES')
+        else write('NO');
+        readln
+end.}
+
+//CHUA LAM DC
+{program B67;}
+
+//CHUA LAM DC
+{program B68;}
+
+//CHUA LAM DC
+{program B69;}
+
+{program B70;
+uses crt;
+var i:integer;
+s:string;
+begin
+        clrscr;
+        write('nhap n'); readln(s);
+        write(s[length(s)]);
+        readln
+end.}
+
+{program B71;
+uses crt;
+var c,t,i,dem:integer;
+s:string;
+begin
+        clrscr;
+        write('nhap n'); readln(s);
+        for i:=1 to length(s) do
+                if s[i] in ['1' .. '9'] then
+                        dem:=dem +1;
+        write(dem);
+        writeln;
+        t:=0;
+        for i:=1 to length(s) do
+                if s[i] in ['1'..'9'] then
+                begin
+                        val(s[i],c);
+                        t:=t+c;
+                end;
+        write(t);
+        writeln;
+        write(s[1], ' ' ,s[length(s)]);
+        readln
+end.}
+
+//CHUA LAM DC
+{program B72;
+uses crt;
+var i:integer;
+s:string;
+begin
+        clrscr;
+        write('nhap s'); readln(s);
+        repeat}
+
+{program B73;
+uses crt;
+var n,s,m:integer;
+CS:boolean;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        n:=m;
+        if n=0 then CS:=false
+        else
+                begin
+                        s:=0;
+                        while n<>0 do
+                        begin
+                                s:=s +(n mod 10)*(n mod 10)*(n mod 10);
+                                n:= n div 10
+                        end;
+                end;
+                        if s=m then CS:=true
+                                else CS:=false;
+        if cs then writeln('TRUE')
+                else write('FALSE');
+        readln
+end.}
+
+//CHUA LAM DC
+{program B74;
+uses crt;}
+
+//CHUA LAM DC
+{program B75;}
+
+{program B76;
+uses crt;
+var g,dem,i,n:integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+                if n mod i=0 then 
+                        dem:=dem+1;
+        if dem=2 then write('YES')
+        else write('NO');
+        writeln;
+        dem:=0;
+        g:=n+1;
+        while dem=0 do
+        begin
+                for i:=1 to g do
+                        if g mod i=0 then 
+                                dem:=dem+1;
+                if dem=2 then 
+                begin
+                        write(g);
+                        break;
+                end
+                else
+                begin
+                        g:=g+1;
+                        dem:=0;
+                end
+        end; 
+        readln
+end.}
+
+{program B77;
+uses crt;
+var n,i,dem,j:integer;
+M:array [1..100] of integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        for i:=1 to n do
+        begin
+                for j:=1 to M[i] do
+                if M[i] mod j=0 then dem:=dem+1;
+                if dem=2 then write(M[i], ' ');
+                dem:=0;
+        end;
+        readln
+end.}
+
+{program B78;
+uses crt;
+var j,d,i,n,dem:integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        i:=1;
+        repeat
+                for j:=1 to i do
+                if i mod j=0 then d:=d+1;
+                if d=2 then
+                begin 
+                        dem:=dem+1;
+                        write(i, ' ');
+                end; 
+                d:=0;
+                i:=i+1;
+        until dem=n; 
+        readln
+end.}
+
+//CHUA LAM DC
+{program B79;
+uses crt;
+var i,n:integer;
+begin
+        clrscr;}
+
+//CHUA LAM DC
+{program B80;
+uses crt;
+var n,i,dem,j,t,k,g,d:integer;
+M:array [1..100] of integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        for i:=1 to n do
+        begin
+                dem:=0;
+                t:=0;
+                d:=0;
+                k:=0;
+                for j:=1 to M[i] do
+                if M[i] mod j=0 then dem:=dem+1;
+                if dem=2 then
+                begin
+                        k:=M[i] mod 10;
+                        M[i]:=M[i] div 10;
+                        t:=t+k;
+                end;
+                for g:=1 to t do
+                begin
+                        if t mod g=0 then 
+                               d:=d+1;
+                end;
+                if d=2 then write('CO')
+                else write('KO');
+                        writeln;
+        end;
+        readln
+end.}
+
+program B81;
+
+
+                
+                
 
 
 
@@ -2303,11 +3713,11 @@ begin
         for i:=2 to length(s) do
                 if s[i] = #32 then
                         s[i + 1]:= upcase(s[i+1]);
-        while (s[1] = ' ') do 
+        while (s[1] = ' ') do
                 delete(s,1,1);
-        while (s[length(s)]= ' ') do 
+        while (s[length(s)]= ' ') do
                 delete(s,length(s),1);
-        while (pos(' ',s) >0) do 
+        while (pos(' ',s) >0) do
                 delete(s,pos(' ',s),1);
         write('xau sau khi chuan hoa ', s);
         writeln;
@@ -2551,7 +3961,3 @@ begin
         writeln(ch,' ',dem[ch]);
         readln
 end.}
-
-
-
-
