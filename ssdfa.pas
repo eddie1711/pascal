@@ -3621,7 +3621,6 @@ var i,n:integer;
 begin
         clrscr;}
 
-//CHUA LAM DC
 {program B80;
 uses crt;
 var n,i,dem,j,t,k,g,d:integer;
@@ -3643,27 +3642,489 @@ begin
                 if M[i] mod j=0 then dem:=dem+1;
                 if dem=2 then
                 begin
-                        k:=M[i] mod 10;
-                        M[i]:=M[i] div 10;
-                        t:=t+k;
+                        while M[i]<>0 do
+                        begin
+                                k:=M[i] mod 10;
+                                M[i]:=M[i] div 10;
+                                t:=t+k;
+                        end;
+                        for g:=1 to t do
+                        begin
+                                if t mod g=0 then 
+                                d:=d+1;
+                        end;
+                        if (d=2) and (dem=2) then write('CO')
+                                else write('KO');
                 end;
-                for g:=1 to t do
-                begin
-                        if t mod g=0 then 
-                               d:=d+1;
-                end;
-                if d=2 then write('CO')
-                else write('KO');
                         writeln;
         end;
         readln
 end.}
 
-program B81;
+//CHUA LAM DC
+{program B81;
+uses crt;
+var r,z,d3,g,i,n,d,d1,d2,t,j,k:integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        i:=1;
+        while n<>0 do
+                begin
+                        n:=n div 10;
+                        z:=z+1;
+                end;   
+        repeat
+                k:=0;
+                d:=0;
+                d1:=0;
+                d2:=0;
+                d3:=0;
+                t:=0;
+                for j:=1 to i do
+                begin
+                        if i mod j=0 then
+                                d:=d+1;
+                end;
+                        if d=2 then
+                        begin
+                                while i<>0 do
+                                begin
+                                        k:=i mod 10;
+                                        i:=i div 10;
+                                        d2:=d2+1;
+                                        t:=t+k;
+                                end;   
+                        end;
+                        for g:=1 to t do
+                                if g mod t=0 then
+                                        d3:=d3+1;
+                                if (d3=2) and (d2=n) then 
+                                        write(i, ' ');
+                        i:=i+1;
+                        r:=d2;
+        until r>z;
+        readln
+end.}
+
+//CHUA LAM DC
+{program B82;
+uses crt;
+var i,n,d,d1,d2,d3,d4,g,j,k,z,t:integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        z:=1;
+        i:=z;
+        repeat
+                d:=0;
+                d1:=0;
+                d2:=0;
+                d3:=0;
+                k:=0;
+                t:=0;
+                for j:=1 to i do
+                begin
+                        if i mod j=0 then
+                                d:=d+1;
+                end;
+                        if d=2 then
+                        begin
+                                while i<>0 do
+                                begin
+                                        k:=i mod 10;
+                                        i:=i div 10;
+                                        t:=t+k;
+                                end;   
+                        end;
+                        for g:=1 to t do
+                                if g mod t=0 then
+                                        d3:=d3+1;
+                                if d3=2 then
+                                begin 
+                                        write(z, ' ');
+                                        d4:=d4+1;
+                                end;
+                        z:=z+1;
+                        i:=z;
+        until d4=n;
+        readln
+end.}
+
+//CHUA HIEU CACH LAM
+{program B83;
+uses crt;
+function kt(n:longint):boolean;
+var i:integer;
+begin
+        clrscr;
+        kt:=true;
+        for i:=2 to trunc(sqrt(n)) do
+                if n mod i=0 then kt:=false;
+        if n<2 then kt:=false;
+end;
+var n:longint;
+begin
+        clrscr;
+        write('N=');readln(n);
+        while kt(n) do n:=n div 10;
+        if n=0 then writeln('N la so sieu nguyen to')
+        else
+                writeln('N khong phai la so sieu nguyen to');
+readln;
+end.
+        readln
+end.}
+
+//CHUA LAM DC
+{program B84;
+uses crt;
+var }
+
+//CHUA LAM DC
+{program B85;
+uses crt;
+var }
+
+//CHUA LAM DC
+{program B86;
+uses crt;
+var n,i,dem:integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);}
+
+//CHUA LAM DC      
+{program B87;
+Uses Crt;}
+
+//CHUA LAM DC
+{program B88;
+uses crt;
+var n,i,j,t,g,d,d1:integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        repeat}
+
+//CHUA LAM DC
+{program B89;}
+
+//CHUA LAM DC
+{program B90;}
+
+{program B91;
+uses crt;
+var d1,n,i,d,j:integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        while d1=0 do
+        begin
+                d:=0;
+                i:=i+1;
+                for j:=1 to i do
+                        if i mod j=0 then 
+                                d:=d+1;
+                if d=2 then
+                if n-i=i then
+                begin 
+                        write(i, '+' ,i);
+                        d1:=d1+1;
+                end;
+        end;
+        readln
+end.}
+
+//CHUA LAM DC
+{program B92;}
+
+//CHUA LAM DC
+{program B93;}
+
+//CHUA LAM DC
+{program B94;}
+
+{program B95;
+uses crt;
+var d4,d3,n,i,j,d,d1,z:integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        z:=n;
+        for i:=1 to n do
+        if n mod i =0 then 
+               d:=d+1;
+        if d<>2 then
+                while z<>0 do 
+                        begin
+                                d1:=0;
+                                z:=z div 10;
+                                d4:=d4+1;
+                                for j:=1 to z do
+                                if z mod j=0 then
+                                        d1:=d1+1;
+                                if d1<>2 then d3:=d3+1;
+                        end;
+        if d3=d4 then write('TRUE')
+        else write('FALSE');
+        readln
+end.}
+
+//CHUA LAM DC
+{program B96;
+uses crt;
+var d3,d2,d,r,j,n,i,dem,g:integer;
+M:array[1..100] of integer;
+A:array[1..100] of integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        for i:=1 to n do
+        begin
+                write('M[',i,']='); readln(M[i]);
+        end;
+        A:=M;
+        for i:=1 to n-1 do
+        for j:=i+1 to n do
+        if M[i]<M[j] then
+        begin
+                r:=M[i];
+                M[i]:=M[j];
+                M[j]:=r;
+        end;
+        for i:=1 to n do
+        if A[i]=M[i] then dem:=dem+1; 
+        for i:=1 to n do
+        begin
+                d3:=0;
+                d:=0;
+                for g:=1 to M[i] do
+                        if M[i] mod g=0 then
+                                d:=d+1;
+                        if d=2 then d2:=d2+1
+                        else
+                                while d3=0 do
+                                begin
+                                        for r:=1 to M[i-1] do
+                                                if M[r] mod M[i]=0 then
+                                                begin
+                                                        d3:=d3+1;
+                                                        d2:=d2+1;
+                                                end;
+                                end;
+        end;
+        if (dem=n) and (d2=n) then write('TRUE')
+        else write('FALSE');
+        readln
+end.}
+
+{program B97;
+uses crt;
+var b,a,t,d,n,i,dem,g,z,r,f:integer;
+begin
+        clrscr;
+        Write('Nhap n '); readln(n);
+        write('nhap a,b'); readln(a,b);
+        i:=2;
+        t:=0;
+        While n<>1 do
+        Begin
+                dem:=0;
+                if n mod i = 0 then 
+                Begin    
+                        for g:=1 to i do
+                        if i mod g=0 then
+                                dem:=dem+1;
+                        if (dem=2) and (i<>d) then t:=t+i;        
+                        d:=d+i;
+                        n:= n div i 
+                End
+                else
+                begin
+                        i:=i+1;
+                        d:=0;
+                end; 
+        end;
+        write(t);
+        z:=t;
+        i:=2;
+        t:=0;
+        for r:=a to b do
+        begin
+                f:=r;
+                i:=2;
+                t:=0;
+                d:=0;
+                dem:=0;
+             While f<>1 do
+                Begin
+                        dem:=0;
+                        if r mod i = 0 then 
+                        Begin    
+                                for g:=1 to r do
+                                if r mod g=0 then
+                                        dem:=dem+1;
+                                if (dem=2) and (i<>d) then t:=t+i;        
+                                d:=d+i;
+                                f:=f div i; 
+                        End
+                        else
+                        begin
+                                i:=i+1;
+                                d:=0;
+                        end; 
+                end;   
+                if t=z then write(r, ' ');
+        end;
+        readln
+end.}
+
+
+//CHUA LAM DC
+{program B98;
+uses crt;
+var }
+
+//CHUA LAM DC
+{program b99;
+uses crt;
+var}
+
+//CHUA LAM DC
+{program B100;
+uses crt;
+var }
+
+//CHUA LAM DC
+{program B101;
+uses crt;
+var }
+
+//CHUA LAM DC
+{program B102;
+uses crt;
+var }
+
+//CHUA LAM DC
+{Program B103;
+uses crt;
+var }
+
+{program B104;
+uses crt;
+var n,i,t:integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        t:=1;
+        for i:=1 to n do
+                t:=t*i;
+        write(t);
+        readln
+end.}
+
+{program B105;
+uses crt;
+var dem,n,i,t:integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        t:=1;
+        for i:=1 to n do
+                t:=t*i;
+        while t<>0 do
+        begin
+                t:=t div 10;
+                dem:=dem+1;
+        end;
+        write(dem);
+        readln
+end.}
+
+{program B106;
+uses crt;
+var dem,k,n,i,t:integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        t:=1;
+        for i:=1 to n do
+                t:=t*i;
+        while t<>0 do
+        begin
+                k:=t mod 10;
+                if k=0 then dem:=dem+1;
+                t:=t div 10;
+        end;
+        write(dem);
+        readln
+end.}
+
+{program B107;
+uses crt;
+var dem,k,n,i,t:integer;
+begin
+        clrscr;
+        write('nhap n'); readln(n);
+        t:=1;
+        for i:=1 to n do
+                t:=t*i;
+        while t<>0 do
+        begin
+                k:=t mod 10;
+                if k<>0 then dem:=dem+1;
+                t:=t div 10;
+        end;
+        write(dem);
+        readln
+end.}
+
+{program B108;
+uses crt;
+var dem,lt,a,n,i:integer;
+begin
+        clrscr;
+        write('nhap a'); readln(a);
+        write('nhap n'); readln(n);
+        lt:=1;
+        for i:=1 to n do
+                lt:=lt*a;
+        while lt<>0 do
+        begin
+                lt:=lt div 10;
+                dem:=dem+1;
+        end;
+        write(dem);
+        readln
+end.}
+
+{program B109;
+uses crt;
+var dem,lt,a,n,i:integer;
+begin
+        clrscr;
+        write('nhap a'); readln(a);
+        write('nhap n'); readln(n);
+        lt:=1;
+        for i:=1 to n do
+                lt:=lt*a;
+        while lt<>0 do
+        begin
+                lt:=lt mod 10;
+                dem:=dem+LT;
+                break;
+        end;
+        write(dem);
+        readln
+end.}
+                
+
 
 
                 
-                
+
+
 
 
 
